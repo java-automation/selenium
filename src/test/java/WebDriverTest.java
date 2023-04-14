@@ -40,6 +40,6 @@ public class WebDriverTest {
     public void loginTest() throws InterruptedException {
         System.out.println("loginTest start");
         driver.get("https://skryabin-careers.herokuapp.com/");
-        Thread.sleep(2000);
+        Thread.sleep(1000);
     }
 }
