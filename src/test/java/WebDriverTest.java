@@ -26,7 +26,7 @@ public class WebDriverTest {
     public void e2eTest() throws InterruptedException {
         System.out.println("e2eTest start");
         driver.get("https://skryabin-careers.herokuapp.com/");
-        Thread.sleep(5000);
+        Thread.sleep(3000);
     }
 
     @Test
