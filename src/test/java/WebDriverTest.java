@@ -23,16 +23,15 @@ public class WebDriverTest {
     }
 
     @Test
-    public void e2eTest() throws InterruptedException {
+    public void e2eTest() {
         System.out.println("e2eTest start");
         driver.get("https://skryabin-careers.herokuapp.com/");
-        Thread.sleep(3000);
     }
+
     @Test
     public void loginTest() throws InterruptedException {
         System.out.println("loginTest start");
         driver.get("https://skryabin-careers.herokuapp.com/");
-        Thread.sleep(3000);
+        Thread.sleep(5000);
     }
-
 }
