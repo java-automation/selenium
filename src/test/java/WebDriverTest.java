@@ -16,7 +16,7 @@ public class WebDriverTest {
         if (browerType.equals("chrome")) {
             WebDriverManager.chromedriver().setup();
         } else if (browerType.equals("firefox")) {
-            WebDriverManager.chromedriver().setup();
+            WebDriverManager.firefoxdriver().setup();
         } else {
             throw new Error("Unsupported browserType!");
         }
