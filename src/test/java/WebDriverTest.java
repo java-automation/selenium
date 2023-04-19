@@ -31,6 +31,7 @@ public class WebDriverTest {
 
     @Test
     public void e2eTest() throws InterruptedException {
+        System.out.println("This sentence added by anyakid");
         System.out.println("e2eTest start");
         driver.get("https://skryabin-careers.herokuapp.com/");
         Thread.sleep(2000);
