@@ -8,14 +8,14 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class WebDriverTest {
 
     WebDriver driver;
-    String browerType = "chrome";
+    String browserType = "chrome";
 
     @Before
     public void before() {
         System.out.println("before()");
-        if (browerType.equals("chrome")) {
+        if (browserType.equals("chrome")) {
             WebDriverManager.chromedriver().setup();
-        } else if (browerType.equals("firefox")) {
+        } else if (browserType.equals("firefox")) {
             WebDriverManager.firefoxdriver().setup();
         } else {
             throw new Error("Unsupported browserType!");
