@@ -8,11 +8,18 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class WebDriverTest {
 
     WebDriver driver;
+    String browerType = "chrome";
 
     @Before
     public void before() {
         System.out.println("before()");
-        WebDriverManager.chromedriver().setup();
+        if (browerType.equals("chrome")) {
+            WebDriverManager.chromedriver().setup();
+        } else if (browerType.equals("firefox")) {
+            WebDriverManager.chromedriver().setup();
+        } else {
+            throw new Error("Unsupported browserType!");
+        }
         driver = new ChromeDriver();
     }
 
@@ -23,15 +30,16 @@ public class WebDriverTest {
     }
 
     @Test
-    public void e2eTest() {
+    public void e2eTest() throws InterruptedException {
         System.out.println("e2eTest start");
         driver.get("https://skryabin-careers.herokuapp.com/");
+        Thread.sleep(2000);
     }
 
     @Test
     public void loginTest() throws InterruptedException {
         System.out.println("loginTest start");
         driver.get("https://skryabin-careers.herokuapp.com/");
-        Thread.sleep(5000);
+        Thread.sleep(1000);
     }
 }
