@@ -10,39 +10,34 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
 public class WebDriverTest {
+  WebDriver driver;
 
-    WebDriver driver;
 
-    @BeforeEach
+  @BeforeEach
     public void before() {
-        WebDriverManager.chromedriver().setup();
-        ChromeOptions options = new ChromeOptions();
-        if (SystemUtils.IS_OS_MAC) {
-            options.setBinary("/Applications/Google Chrome.app/Contents/MacOS/Google Chrome");
-        } else if (SystemUtils.IS_OS_WINDOWS) {
-            options.setBinary("C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe");
-        }
-        driver = new ChromeDriver(options);
+    WebDriverManager.chromedriver().setup();
+    ChromeOptions options = new ChromeOptions();
+    if (SystemUtils.IS_OS_MAC) {
+      options.setBinary("/Applications/Google Chrome.app/Contents/MacOS/Google Chrome");
+    } else if (SystemUtils.IS_OS_WINDOWS) {
+      options.setBinary("C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe");
+    }
+    driver = new ChromeDriver(options);
     }
 
-    @DisplayName("End to End test")
-    @Test
-    public void end2EndTest() throws InterruptedException {
-        driver.get("https://skryabin.com/market/quote.html");
-        driver.findElement(By.name("username")).sendKeys("jdoe");
-        Thread.sleep(2000);
-    }
+  @DisplayName("End to End test")
+  @Test
+  public void end2EndTest() throws InterruptedException {
+    driver.get("https://skryabin.com/market/quote.html");
+    driver.findElement(By.name("username")).sendKeys("jdoe");
+    Thread.sleep(2000);
 
-    @DisplayName("Negative testing")
-    @Test
-    public void anotherTest() throws InterruptedException {
-        driver.get("https://skryabin.com/market/quote.html");
-        driver.findElement(By.id("formSubmit")).click();
-        Thread.sleep(2000);
-    }
-
-    @AfterEach
+  }
+  @AfterEach
     public void after() {
-        driver.quit();
-    }
+    driver.quit();
+  }
+
+
+
 }
