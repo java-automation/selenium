@@ -1,12 +1,11 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.skryabin</groupId>
+    <groupId>com.kremnitser</groupId>
     <artifactId>selenium</artifactId>
     <version>1.0.0</version>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-
     <build>
         <plugins>
             <plugin>
@@ -20,7 +19,6 @@
             </plugin>
         </plugins>
     </build>
-
     <dependencies>
         <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
         <dependency>
@@ -48,9 +46,7 @@
             <version>3.24.2</version>
             <scope>test</scope>
         </dependency>
-
     </dependencies>
-
     <repositories>
         <repository>
             <id>central</id>
@@ -58,5 +54,4 @@
             <url>https://repo1.maven.org/maven2/</url>
         </repository>
     </repositories>
-
 </project>
