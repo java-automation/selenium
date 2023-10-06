@@ -33,7 +33,7 @@ public class WebDriverTest {
         Thread.sleep(2000);
     }
 
-    @DisplayName("Negative test")
+    @DisplayName("Negative testing")
     @Test
     public void anotherTest() throws InterruptedException {
         driver.get("https://skryabin.com/market/quote.html");
