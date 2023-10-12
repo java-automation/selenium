@@ -41,7 +41,7 @@ public class WebDriverTest {
         sleep(2000);
 
     }
-    @DisplayName("Negative test")
+    @DisplayName("Negative test_")
     @Test
     public void end2EndTest() throws InterruptedException {
         System.out.println("Hello world!");
